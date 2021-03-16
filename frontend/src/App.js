@@ -24,11 +24,11 @@ import AllProductsScreen from "./screens/AllProductsScreen";
 
 const App = () => {
 	return (
-		<Router>
-			<Header />
+		<>
+			<Router>
+				<Header />
 
-			<main>
-				<Container className="mainContainer">
+				<main>
 					<Route path="/shipping" component={ShippingScreen} />
 					<Route path="/payment" component={PaymentScreen} />
 					<Route path="/placeOrder" component={PlaceOrderScreen} />
@@ -79,12 +79,12 @@ const App = () => {
 						exact
 					/>
 					<Route path="/allproducts" component={AllProductsScreen} />
-				</Container>
-				{/* <Sider /> */}
-			</main>
 
+					{/* <Sider /> */}
+				</main>
+			</Router>
 			<Footer />
-		</Router>
+		</>
 	);
 };
 
