@@ -33,61 +33,10 @@ const SearchBox = ({ history }) => {
 					placeholder="Search Products..."
 					className="mr-sm-2 ml-sm-5 searchBar"
 				></Form.Control>
-				<Button type="submit" className="p-2">
+				<Button type="submit" className="p-2 searchButton">
 					Search
 				</Button>
 			</Form>
-			<NavDropdown
-				className="mx-5"
-				title="genre"
-				name="genre"
-				id="genre"
-				key={keyword}
-				style={{ color: "white" }}
-			>
-				<NavDropdown.Item
-					onSelect={changeHandler}
-					eventKey="Cold Wave"
-					value="Cold Wave"
-				>
-					Cold Wave
-				</NavDropdown.Item>
-				<NavDropdown.Item
-					onSelect={changeHandler}
-					eventKey="Punk"
-					value="Punk"
-				>
-					Punk
-				</NavDropdown.Item>
-				<NavDropdown.Item
-					onSelect={changeHandler}
-					eventKey="Ambient"
-					value="Ambient"
-				>
-					Ambient
-				</NavDropdown.Item>
-				<NavDropdown.Item
-					onSelect={changeHandler}
-					eventKey="Industrial"
-					value="Industrial"
-				>
-					Industrial
-				</NavDropdown.Item>
-				<NavDropdown.Item
-					onSelect={changeHandler}
-					eventKey="Techno"
-					value="Techno"
-				>
-					Techno
-				</NavDropdown.Item>
-				<NavDropdown.Item
-					onSelect={changeHandler}
-					eventKey="New Wave"
-					value="New Wave"
-				>
-					New Wave
-				</NavDropdown.Item>
-			</NavDropdown>
 		</>
 	);
 };

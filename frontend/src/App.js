@@ -2,6 +2,8 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Sider from "./components/Sider";
+
 import Footer from "./components/Footer";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
@@ -18,13 +20,15 @@ import UserEditScreen from "./screens/UserEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
 import OrderListScreen from "./screens/OrderListScreen";
+import AllProductsScreen from "./screens/AllProductsScreen";
 
 const App = () => {
 	return (
 		<Router>
 			<Header />
+
 			<main>
-				<Container>
+				<Container className="mainContainer">
 					<Route path="/shipping" component={ShippingScreen} />
 					<Route path="/payment" component={PaymentScreen} />
 					<Route path="/placeOrder" component={PlaceOrderScreen} />
@@ -74,8 +78,11 @@ const App = () => {
 						component={HomeScreen}
 						exact
 					/>
+					<Route path="/allproducts" component={AllProductsScreen} />
 				</Container>
+				{/* <Sider /> */}
 			</main>
+
 			<Footer />
 		</Router>
 	);

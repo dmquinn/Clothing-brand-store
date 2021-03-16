@@ -1,0 +1,17 @@
+.videoPlayer {
+  position: absolute;
+  top: -100px;
+  left: 0px;
+  height: 140vh;
+  width: 120vw;
+  pointer-events: none;
+}
+
+.vp-controls-wrapper {
+  opacity: 0% !important;
+}
+
+.invisible {
+  opacity: 0% !important;
+}
+/*# sourceMappingURL=video.css.map */

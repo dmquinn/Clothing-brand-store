@@ -1,0 +1,75 @@
+.navbar {
+  width: 100vw;
+  left: 20px;
+  position: relative;
+  z-index: 9;
+}
+
+.navbar-brand {
+  position: relative;
+  color: white !important;
+  font-family: "Liquido-fluid";
+  font-size: 70px;
+  letter-spacing: 8px;
+}
+
+.collapse {
+  position: relative;
+  left: 50px;
+  color: white !important;
+  padding: 5px;
+}
+
+.nav-link {
+  text-align: center;
+  color: white !important;
+  font-size: 14px;
+  margin-right: 50px;
+  width: 150px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.219) !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.searchBar {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid white;
+  position: relative;
+  right: 50px;
+}
+
+.searchBar:focus {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.searchButton {
+  background-color: transp;
+  border: 1px solid white;
+}
+
+.sideLinksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 310px;
+  left: 10px;
+}
+
+.sideLinksContainer .sideLink p {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-bottom: 130px;
+}
+/*# sourceMappingURL=header.css.map */

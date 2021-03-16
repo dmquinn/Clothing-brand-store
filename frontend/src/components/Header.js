@@ -1,51 +1,40 @@
 import React from "react";
-import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { LinkContainer } from "react-router-bootstrap";
-import {
-	Navbar,
-	Nav,
-	Container,
-	NavDropdown,
-	Jumbotron,
-} from "react-bootstrap";
-import SearchBox from "./SearchBox";
-import DropdownMenu from "./DropdownMenu";
+import { Route } from "react-router-dom";
 
+import { LinkContainer, Row } from "react-router-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { logout } from "../actions/userActions";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
 	const dispatch = useDispatch();
-
 	const userLogin = useSelector((state) => state.userLogin);
 	const { userInfo } = userLogin;
 
 	const logoutHandler = () => {
 		dispatch(logout());
 	};
-
 	return (
 		<header>
-			<Jumbotron className="jumbotron"></Jumbotron>
-			<Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+			<Navbar collapseOnSelect>
 				<Container>
 					<LinkContainer to="/">
-						<Navbar.Brand>MILK RECORDS</Navbar.Brand>
+						<img
+							className="brand"
+							src="https://txt.1001fonts.net/img/txt/b3RmLjcyLmZmZmZmZi5hRzl5Y205elkyOXdaWE0uMA/ballowien.regular.png"
+							alt=""
+						></img>
 					</LinkContainer>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
-						<Route
-							render={({ history }) => (
-								<SearchBox history={history} />
-							)}
-						/>
 						<Nav className="ml-auto">
-							<LinkContainer to="/cart">
-								<Nav.Link>
-									<i className="fas fa-shopping-cart"></i>{" "}
-									Cart
-								</Nav.Link>
-							</LinkContainer>
+							<Route
+								render={({ history }) => (
+									<SearchBox history={history} />
+								)}
+							/>
+
 							{userInfo ? (
 								<NavDropdown
 									title={userInfo.name}
@@ -67,27 +56,20 @@ const Header = () => {
 									</Nav.Link>
 								</LinkContainer>
 							)}
-							{userInfo && userInfo.isAdmin && (
-								<NavDropdown title="Admin" id="adminmenu">
-									<LinkContainer to="/admin/userlist">
-										<NavDropdown.Item>
-											Users
-										</NavDropdown.Item>
-									</LinkContainer>
-									<LinkContainer to="/admin/productlist">
-										<NavDropdown.Item>
-											Products
-										</NavDropdown.Item>
-									</LinkContainer>
-									<LinkContainer to="/admin/orderlist">
-										<NavDropdown.Item>
-											Orders
-										</NavDropdown.Item>
-									</LinkContainer>
-								</NavDropdown>
-							)}
 						</Nav>
 					</Navbar.Collapse>
+					<div className="sideLinksContainer">
+						<LinkContainer to="/login">
+							<Nav.Link className="sideLink">
+								<p className="sideLink">Shop</p>
+							</Nav.Link>
+						</LinkContainer>
+						<LinkContainer to="/allproducts">
+							<Nav.Link className="sideLink">
+								<p className="sideLink">Looks</p>
+							</Nav.Link>
+						</LinkContainer>
+					</div>
 				</Container>
 			</Navbar>
 		</header>
