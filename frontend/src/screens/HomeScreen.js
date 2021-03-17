@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
-import { Row } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 window.addEventListener("scroll", function () {
 	const target = document.querySelectorAll("img, h1");
@@ -36,15 +36,63 @@ const HomeScreen = () => {
 			>
 				<div className="barrier"></div>
 			</Row>
-			<Row style={{ position: "relative" }}>
+			<Row style={{ position: "relative" }} className="w-60 mt-5">
+				<Col lg={6}>
+					<p style={{ color: "#eabbd9" }} className="offset-2">
+						The World card signifies a long journey coming to an
+						end. If you've recently accomplished a lifelong goal,
+						that's why this card appears. Take a well-earned victory
+						lap before you prepare for the next big adventure. The
+						card depicts a butterfly at its last stage in life:
+						fully transformed and able to fly. Such is the
+						representation the World card brings: The end to a long
+						journey. As the butterfly rises above, there's a sense
+						of accomplishment and success associated with its
+						movement. That's because the World's presence is a clear
+						indicator that you have lived, you have loved, and you
+						have learned. It's time to use that information to live
+						the life you want.
+					</p>
+				</Col>
 				<img
-					className="bigDress offset-1 mt-5"
+					className="bigDress offset-5 mt-5"
 					src="https://res.cloudinary.com/danielmurphy/image/upload/v1615917883/clothes/dress1_obqubs.png"
 					alt=""
 					data-rate="-0.25"
 					data-direction="vertical"
 				></img>
+				<p className="w-50" style={{ color: "#eabbd9" }}>
+					<b>
+						The World card signifies a long journey coming to an
+						end. If you've recently accomplished a lifelong goal,
+						that's why this card appears. Take a well-earned victory
+						lap before you prepare for the next big adventure. The
+						card depicts a butterfly at its last stage in life:
+						fully transformed and able to fly. Such is the
+						representation the World card brings: The end to a long
+						journey. As the butterfly rises above, there's a sense
+						of accomplishment and success associated with its
+						movement. That's because the World's presence is a clear
+						indicator that you have lived, you have loved, and you
+						have learned. It's time to use that information to live
+						the life you want.
+					</b>
+				</p>
+				<h1
+					className="ml-5 mb-5"
+					style={{
+						fontSize: "55px",
+					}}
+					data-rate="-0.95"
+				>
+					YOUR HORROSCOPE LOOKS BLEAK
+				</h1>
 			</Row>
+			<p>
+				Horroscopes that don't bring joy bring truth. You've been at
+				this open sea for far too long. Take my hand, take a breath,
+				there's land ahoy
+			</p>
 			<Row className="mt-5">
 				<img
 					className="bigDress offset-1 mt-5"
@@ -53,24 +101,12 @@ const HomeScreen = () => {
 					data-rate="-0.45"
 					data-direction="vertical"
 				></img>
-				<h1
-					className="ml-5 mb-5"
-					style={{
-						color: "white",
-						fontSize: "55px",
-						textShadow: "2px 2px 8px black",
-					}}
-					data-rate="-1.35"
-				>
-					YOUR HORROSCOPE IS LOOKING BLEAK
-				</h1>
+
 				<h1
 					className="offset-5"
 					style={{
-						color: "white",
+						color: "black",
 						fontSize: "45px",
-
-						textShadow: "2px 2px 12px black",
 					}}
 					data-rate="-0.85"
 				>

@@ -191,9 +191,36 @@
   opacity: 0% !important;
 }
 
+.card {
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+
+.productImage {
+  -webkit-filter: drop-shadow(2px 2px 14px rgba(0, 0, 0, 0.233));
+          filter: drop-shadow(2px 2px 14px rgba(0, 0, 0, 0.233));
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  height: 300px;
+  width: auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.productImage:hover {
+  -webkit-transform: rotateX(10deg) rotateY(13deg) rotateZ(3deg) scale(1.2);
+          transform: rotateX(10deg) rotateY(13deg) rotateZ(3deg) scale(1.2);
+  cursor: pointer;
+}
+
+.productImage:nth-child(1):hover {
+  -webkit-transform: rotateX(-10deg) rotateY(13deg) rotateZ(3deg) scale(1.2);
+          transform: rotateX(-10deg) rotateY(13deg) rotateZ(3deg) scale(1.2);
+}
+
 body {
   overflow-x: hidden;
-  background-color: black;
+  background-color: white;
 }
 
 .barrier {
@@ -206,5 +233,12 @@ p,
 a {
   font-family: "Forum", cursive;
   letter-spacing: 4px;
+}
+
+.bigDress {
+  height: 700px;
+  width: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=index.css.map */

@@ -59,7 +59,7 @@ const Header = () => {
 						</Nav>
 					</Navbar.Collapse>
 					<div className="sideLinksContainer">
-						<LinkContainer to="/login">
+						<LinkContainer to="/allproducts">
 							<Nav.Link className="sideLink">
 								<p className="sideLink">Shop</p>
 							</Nav.Link>
