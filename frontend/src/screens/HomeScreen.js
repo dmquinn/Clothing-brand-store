@@ -1,6 +1,4 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import { LinkContainer } from "react-router-bootstrap";
 import { Row, Col } from "react-bootstrap";
 
 window.addEventListener("scroll", function () {
@@ -11,7 +9,7 @@ window.addEventListener("scroll", function () {
 		var pos = window.pageYOffset * target[index].dataset.rate;
 
 		target[index].style.transform = "translate3d(0px, " + pos + "px, 9px)";
-		console.log(target);
+		// console.log(target);
 	}
 });
 
@@ -37,7 +35,7 @@ const HomeScreen = () => {
 				<div className="barrier"></div>
 			</Row>
 			<Row style={{ position: "relative" }} className="w-60 mt-5">
-				<Col lg={6}>
+				<Col lg={6} className="revealer">
 					<p style={{ color: "#eabbd9" }} className="offset-2">
 						The World card signifies a long journey coming to an
 						end. If you've recently accomplished a lifelong goal,
@@ -55,7 +53,7 @@ const HomeScreen = () => {
 					</p>
 				</Col>
 				<img
-					className="bigDress offset-5 mt-5"
+					className="bigDress offset-5 mt-5 revealme"
 					src="https://res.cloudinary.com/danielmurphy/image/upload/v1615917883/clothes/dress1_obqubs.png"
 					alt=""
 					data-rate="-0.25"
@@ -82,6 +80,7 @@ const HomeScreen = () => {
 					className="ml-5 mb-5"
 					style={{
 						fontSize: "55px",
+						transition: "0.3s",
 					}}
 					data-rate="-0.95"
 				>
@@ -105,8 +104,8 @@ const HomeScreen = () => {
 				<h1
 					className="offset-5"
 					style={{
-						color: "black",
 						fontSize: "45px",
+						transition: "0.3s",
 					}}
 					data-rate="-0.85"
 				>

@@ -7,6 +7,7 @@
 body {
 	overflow-x: hidden;
 	background-color: rgb(255, 255, 255);
+	transition: all 1s ease;
 }
 
 .barrier {
@@ -22,5 +23,5 @@ a {
 .bigDress {
 	height: 700px;
 	width: auto;
-	transition: 0.5s;
+	transition: 0.3s;
 }

@@ -1,8 +1,35 @@
 .card {
+	position: relative;
 	perspective: 1500px;
+	margin-left: 70px;
+	width: 300px;
+	height: auto;
+	transition: 0.3s;
+	border: none !important;
+	background-color: rgba(255, 2, 2, 0) !important;
+	overflow-y: visible;
+	.card-text,
+	strong {
+		font-size: 20px;
+	}
+	&:hover {
+		background-color: black !important;
+		transition: 0.3s;
+		transform: rotateX(5deg) rotateY(10deg) rotateZ(4deg) scale(1.2);
+		.card-text,
+		strong {
+			transform: rotateX(-5deg) rotateY(-10deg) rotateZ(-4deg) scale(1.2);
+			transition: 0.5s;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			color: white;
+		}
+	}
+}
+.card:nth-child(2):hover {
+	background-color: rgba(255, 255, 255, 0) !important;
+	border: 1px solid rgb(0, 0, 0) !important;
 }
 .productImage {
-	filter: drop-shadow(2px 2px 14px rgba(0, 0, 0, 0.233));
 	transform: rotate(0);
 	height: 300px;
 	width: auto;
@@ -14,4 +41,28 @@
 }
 .productImage:nth-child(1):hover {
 	transform: rotateX(-10deg) rotateY(13deg) rotateZ(3deg) scale(1.2);
+}
+.sliderContainer {
+	width: 5000px;
+	display: flex;
+	flex-direction: row;
+	overflow-x: hidden;
+	transition: 0.3s;
+}
+
+.productImage:nth-child(2) {
+	position: relative !important;
+	padding-right: 400px !important;
+}
+// .dontClip {
+// 	overflow-y: visible !important;
+// }
+button,
+.arrow {
+	background-color: rgba(0, 0, 0, 0);
+	border: none !important;
+	outline: none;
+	&:focus {
+		outline: none;
+	}
 }

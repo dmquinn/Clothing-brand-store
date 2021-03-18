@@ -192,13 +192,48 @@
 }
 
 .card {
+  position: relative;
   -webkit-perspective: 1500px;
           perspective: 1500px;
+  margin-left: 70px;
+  width: 300px;
+  height: auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: none !important;
+  background-color: rgba(255, 2, 2, 0) !important;
+  overflow-y: visible;
+}
+
+.card .card-text,
+.card strong {
+  font-size: 20px;
+}
+
+.card:hover {
+  background-color: black !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotateX(5deg) rotateY(10deg) rotateZ(4deg) scale(1.2);
+          transform: rotateX(5deg) rotateY(10deg) rotateZ(4deg) scale(1.2);
+}
+
+.card:hover .card-text,
+.card:hover strong {
+  -webkit-transform: rotateX(-5deg) rotateY(-10deg) rotateZ(-4deg) scale(1.2);
+          transform: rotateX(-5deg) rotateY(-10deg) rotateZ(-4deg) scale(1.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.card:nth-child(2):hover {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border: 1px solid black !important;
 }
 
 .productImage {
-  -webkit-filter: drop-shadow(2px 2px 14px rgba(0, 0, 0, 0.233));
-          filter: drop-shadow(2px 2px 14px rgba(0, 0, 0, 0.233));
   -webkit-transform: rotate(0);
           transform: rotate(0);
   height: 300px;
@@ -218,9 +253,42 @@
           transform: rotateX(-10deg) rotateY(13deg) rotateZ(3deg) scale(1.2);
 }
 
+.sliderContainer {
+  width: 5000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.productImage:nth-child(2) {
+  position: relative !important;
+  padding-right: 400px !important;
+}
+
+button,
+.arrow {
+  background-color: rgba(0, 0, 0, 0);
+  border: none !important;
+  outline: none;
+}
+
+button:focus,
+.arrow:focus {
+  outline: none;
+}
+
 body {
   overflow-x: hidden;
   background-color: white;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .barrier {
@@ -238,7 +306,7 @@ a {
 .bigDress {
   height: 700px;
   width: auto;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=index.css.map */
