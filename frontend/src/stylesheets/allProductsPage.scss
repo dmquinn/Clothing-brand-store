@@ -1,4 +1,9 @@
+.allProductsContainer {
+	border: 1px solid rgb(0, 0, 0);
+}
 .card {
+	display: block;
+	align-items: center;
 	position: relative;
 	perspective: 1500px;
 	margin-left: 70px;
@@ -25,9 +30,13 @@
 		}
 	}
 }
-.card:nth-child(2):hover {
-	background-color: rgba(255, 255, 255, 0) !important;
-	border: 1px solid rgb(0, 0, 0) !important;
+.card:nth-child(2) {
+	position: relative;
+	margin-right: 110px;
+	&:hover {
+		background-color: rgba(255, 255, 255, 0) !important;
+		border: 1px solid rgb(0, 0, 0) !important;
+	}
 }
 .productImage {
 	transform: rotate(0);
@@ -49,14 +58,9 @@
 	overflow-x: hidden;
 	transition: 0.3s;
 }
-
-.productImage:nth-child(2) {
-	position: relative !important;
-	padding-right: 400px !important;
+.sliderContainer {
+	overflow: visible !important;
 }
-// .dontClip {
-// 	overflow-y: visible !important;
-// }
 button,
 .arrow {
 	background-color: rgba(0, 0, 0, 0);

@@ -1,4 +1,12 @@
+.allProductsContainer {
+  border: 1px solid black;
+}
+
 .card {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   -webkit-perspective: 1500px;
           perspective: 1500px;
@@ -33,6 +41,11 @@
   transition: 0.5s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
+}
+
+.card:nth-child(2) {
+  position: relative;
+  margin-right: 110px;
 }
 
 .card:nth-child(2):hover {
@@ -74,9 +87,8 @@
   transition: 0.3s;
 }
 
-.productImage:nth-child(2) {
-  position: relative !important;
-  padding-right: 400px !important;
+.sliderContainer {
+  overflow: visible !important;
 }
 
 button,

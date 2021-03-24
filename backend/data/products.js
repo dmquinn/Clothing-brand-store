@@ -47,5 +47,29 @@ const products = [
 		rating: 4.5,
 		numReviews: 12,
 	},
+	{
+		name: "Tee",
+		image:
+			"https://res.cloudinary.com/danielmurphy/image/upload/v1616526012/clothes/teeOne_nrhwnq.png",
+		description: "A dress",
+		brand: "Schraubstock",
+		category: "Tops",
+		price: 75.99,
+		countInStock: 3,
+		rating: 4.5,
+		numReviews: 12,
+	},
+	{
+		name: "Tank",
+		image:
+			"https://res.cloudinary.com/danielmurphy/image/upload/v1616526900/clothes/tank_wrvxhv.png",
+		description: "A dress",
+		brand: "Schraubstock",
+		category: "Tops",
+		price: 75.99,
+		countInStock: 3,
+		rating: 4.5,
+		numReviews: 12,
+	},
 ];
 module.exports = products;

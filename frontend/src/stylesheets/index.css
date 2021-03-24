@@ -74,6 +74,15 @@
   margin-bottom: 130px;
 }
 
+@media only screen and (max-width: 700px) {
+  .sideLink p {
+    margin-bottom: 50px;
+  }
+  .brand {
+    height: 20px;
+  }
+}
+
 .copyright {
   font-size: 12px;
 }
@@ -191,7 +200,21 @@
   opacity: 0% !important;
 }
 
+@media only screen and (max-width: 700px) {
+  .videoPlayer {
+    height: 0px;
+  }
+}
+
+.allProductsContainer {
+  border: 1px solid black;
+}
+
 .card {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   -webkit-perspective: 1500px;
           perspective: 1500px;
@@ -226,6 +249,11 @@
   transition: 0.5s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
+}
+
+.card:nth-child(2) {
+  position: relative;
+  margin-right: 110px;
 }
 
 .card:nth-child(2):hover {
@@ -267,9 +295,8 @@
   transition: 0.3s;
 }
 
-.productImage:nth-child(2) {
-  position: relative !important;
-  padding-right: 400px !important;
+.sliderContainer {
+  overflow: visible !important;
 }
 
 button,
@@ -286,9 +313,13 @@ button:focus,
 
 body {
   overflow-x: hidden;
-  background-color: white;
+  background-color: black;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+}
+
+.dontClip {
+  background-color: black;
 }
 
 .barrier {
@@ -308,5 +339,14 @@ a {
   width: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media only screen and (max-width: 700px) {
+  .barrier {
+    height: 0px;
+  }
+  body {
+    background: black;
+  }
 }
 /*# sourceMappingURL=index.css.map */

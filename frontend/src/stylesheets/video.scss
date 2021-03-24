@@ -11,3 +11,8 @@
 .invisible {
 	opacity: 0% !important;
 }
+@media only screen and (max-width: 700px) {
+	.videoPlayer {
+		height: 0px;
+	}
+}
